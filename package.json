@@ -1,0 +1,21 @@
+{
+  "name": "yak-bun-registerhooks-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:bun": "bun --bun node_modules/vite/bin/vite.js build",
+    "build:node": "node node_modules/vite/bin/vite.js build",
+    "dev:bun": "bun --bun node_modules/vite/bin/vite.js",
+    "dev:node": "node node_modules/vite/bin/vite.js",
+    "probe": "bun -e 'import { registerHooks } from \"node:module\"; console.log(typeof registerHooks)'",
+    "matrix": "bash scripts/matrix.sh"
+  },
+  "dependencies": {
+    "@yak/react": "10.1.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.8"
+  }
+}
